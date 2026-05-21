@@ -25,7 +25,9 @@ export default function Jogador1(){
 // função para diminuir 1 ponto
   function diminuir(){
    // pega o valor atual e subtrai 1
-    setPontos(pontos-1);
+   if(pontos > 0){
+    setPontos(pontos-1)
+  };
   }
 // função para resetar o contador 
   function resetar(){
@@ -38,7 +40,7 @@ export default function Jogador1(){
     <View style={styles.container}>
     {/* titulo no APP */}
       <Text style={styles.titulo}>
-        🎮 Contador Gamer
+        🎮 <b>Contador Gamer</b>
       </Text>
       {/* Mostra o valor dos pontos */}
       <Text style={styles.pontos}>{pontos}</Text>
@@ -52,12 +54,12 @@ export default function Jogador1(){
        style={styles.botao}>
         <Text style={styles.textoBotao}>-1</Text>
        </TouchableOpacity>
-      </View>
       {/* botão resetar */}
        <TouchableOpacity onPress={resetar}
        style={styles.botaoReset}>
-        <Text style={styles.textoBotao}>Reset</Text>
+        <Text style={styles.textoBotao}>Resetar</Text>
        </TouchableOpacity>
+       </View>
     </View>
   );
 }
@@ -68,7 +70,7 @@ const styles = StyleSheet.create({
     // Ocupo a tela toda
     flex:1,
     // Cor do fundo
-    backgroundColor:'#121212',
+    backgroundColor:'powderblue',
     // Centraliza Horizonalmente
     alignItems:'center',
     // Centraliza Verticalmente
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
     // TAMANHO DA FONTE
     fontSize:32,
     // COR DO TEXTO
-    color:'#00ff88',
+    color:'#000',
     // TEXTO EM NEGRITO
     fontWight:'bold',
     // ESPAÇO ABAIXO
@@ -92,7 +94,7 @@ const styles = StyleSheet.create({
     // TAMANHO GIGANTE
     fontSize:80,
     // COR BRANCA
-    color:'#ffffff',
+    color:'#000',
     // ESPAÇO ABAIXO
     marginBottom:40,
     // NEGRITO
@@ -108,7 +110,7 @@ const styles = StyleSheet.create({
 // ESTILO DOS BOTÕES +1 E -1
   botao:{
     // COR DO BOTÃO
-    backgroundColor:'#00ff88',
+    backgroundColor:'skyblue',
    // ESPAÇAMENTO VERTICAL 
     paddingVertical:15,
     // ESPAÇAMENTO HORIZONTAL
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
 // ESTILO DE BOTÃO RESETAR
   botaoReset:{
     // COR VERMELHA
-    backgroundColor:'#ff3b30',
+    backgroundColor:'steelblue',
     // ESPAÇAMENTOS
     paddingVertical:15,
     paddingHorizontal:40,
