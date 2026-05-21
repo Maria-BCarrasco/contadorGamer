@@ -59,9 +59,9 @@ npm start
 
 ## 💡 Frase Importante
 
-> Programação não é decorar codigo
+> Programação não é decorar código.
 >
-> Programação é criar, testar e experimentar
+> Programação é criar, testar e experimentar.
 
 ---
 
